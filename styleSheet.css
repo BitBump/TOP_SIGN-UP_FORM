@@ -1,0 +1,130 @@
+/*#-=FONTS=-###############################################################*/
+
+@font-face {
+    font-family: 'Norse';
+    src: url('fonts/Norse.woff2') format('woff2'),
+        url('fonts/Norse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Norse';
+    src: url('fonts/Norse-Bold.woff2') format('woff2'),
+        url('fonts/Norse-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*#########################################################################*/
+
+/*#-=CSS_RESET=-###########################################################*/
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/*#########################################################################*/
+
+/*#-=CUSTOM_RULES=-########################################################*/
+
+body, .logo_bkg{
+    display: flex;
+    flex-direction: row;
+}
+
+.img_div{
+    position: relative;
+    height: 100vh;
+    width: 30vw;
+}
+
+.img_div .bkg_img{
+    height: 100%;
+    width: 100%;
+}
+
+.img_div .logo_bkg{
+    position: absolute;
+    top: 25vh;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 20rem;
+    width: 100%;
+    background-color: #0b0e1099;
+}
+
+.logo_bnr{
+    font-family: "Norse";
+    font-size: 12rem; /*maybe clamp?*/
+    font-weight: 900;
+    color: white;
+}
+
+.logo_bnr::before{
+    background-image: url("./logos/odin-lined.png");
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: -20%;
+    color: white;
+    height:250px;
+    width: 185px;
+    content:"";
+}
+
+.content_div{
+    height: 100vh;
+    width: 70vw;
+    background-color:slateblue;
+}
+
+/*#########################################################################*/
+
