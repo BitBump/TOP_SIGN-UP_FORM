@@ -213,6 +213,7 @@ body,
 /*-=FORM CONTAINER=----------------------------------------*/
 .content_div .form_container{
   padding-top: 20px;
+  padding-bottom: 35px;
 
   width: 100%;
   height: fit-content;
